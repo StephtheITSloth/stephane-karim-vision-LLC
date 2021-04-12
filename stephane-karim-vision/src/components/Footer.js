@@ -1,9 +1,12 @@
 import React from 'react';
+import FooterBar from './FooterBar'
 
 const Footer = () => {
 	return (
 		<div>
-			<h1>I am the Footer</h1>
+			<FooterBar>
+				
+			</FooterBar>
 		</div>
 	);
 };

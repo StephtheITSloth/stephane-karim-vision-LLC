@@ -1,5 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { Link} from 'react-router-dom';
 import styled from 'styled-components';
+
+//Styling
 import {
 	Nav,
 	NavBarMenu,
@@ -9,13 +12,26 @@ import {
 	NavItems,
 } from './StyledNav';
 import { IconContext } from 'react-icons/lib';
+import { TiThMenuOutline, TiThMenu } from 'react-icons/ti';
 
 const NavBar = () => {
+	const [click, setClick] = useState(false);
+
+	const handleClick = () => {
+		setClick(!click);
+	};
 	return (
-		<div>
-			<Nav></Nav>
-			<h2>I am the end of the navbar</h2>
-		</div>
+		<>
+			<Nav>
+				<NavLogo to='/'>
+					<NavIcon />
+					Stephane Karim Photography
+				</NavLogo>
+				<NavBarMenu onClick={handleClick}>
+					{click ? <TiThMenuOutline /> : <TiThMenu />}
+				</NavBarMenu>
+			</Nav>
+		</>
 	);
 };
 

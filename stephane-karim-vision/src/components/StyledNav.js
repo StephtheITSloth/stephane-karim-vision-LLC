@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Container from '../GlobalStyle';
-import { ImHeadphones } from 'react-icons/im';
+import { GoDeviceCamera } from 'react-icons/go';
 // import Grey from '../../bckgroundImg/Grade-Grey.jpg';
 
 export const Nav = styled.nav`
+	background-color: #ffad99;
+	opacity: 0.6;
 	color: white;
-	height: 80px;
+	height: 45px;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	position: sticky;
 	top: 0;
 	z-index: 999;
@@ -22,11 +25,11 @@ export const NavbarContainer = styled(Container)`
 	justify-content: space-between;
 	height: 80px;
 	color: white;
-	${Container}
 `;
 
 export const NavLogo = styled(Link)`
-	color: white;
+	color: White;
+	width: 100%;
 	justify-self: flex-start;
 	cursor: pointer;
 	text-decoration: none;
@@ -35,7 +38,7 @@ export const NavLogo = styled(Link)`
 	align-items: center;
 `;
 
-export const NavIcon = styled(ImHeadphones)`
+export const NavIcon = styled(GoDeviceCamera)`
 	margin: 0.75rem;
 	display: flex;
 	justify-self: flex-start;
@@ -132,5 +135,5 @@ export const StyledFooterUl = styled.ul`
 export const StyledFooterLi = styled.li`
 	color: white;
 	display: inline-block;
-	padding: 10px;
+	padding: 20px;
 `;
