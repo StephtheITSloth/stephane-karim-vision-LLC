@@ -1,13 +1,29 @@
-import React, {useState, useEffect} from 'react'
-import { BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch, Redirect, Link} from 'react-router-dom';
 import './App.css';
+import { IconContext } from 'react-icons/lib';
+import GlobalStyle from './GlobalStyle';
 
-function App() {
+//import components
+import Nav from './components/Nav'
+import Main from './components/Main'
+import Footer from './components/Footer'
+
+export default function App() {
   return (
-    <div>
-      <p>KArim</p>
-    </div>
-  );
-}
+		<>
+			<GlobalStyle />
+			<IconContext.Provider value={{ color: 'white' }}>
+        <Nav>
 
-export default App;
+        </Nav>
+        <Main>
+
+        </Main>
+        <Footer>
+
+        </Footer>
+			</IconContext.Provider>
+    </>
+	);
+}

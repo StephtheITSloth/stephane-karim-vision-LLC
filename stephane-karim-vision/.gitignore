@@ -21,3 +21,11 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# This is the Schema for the NavBar
+# // IconContext
+# // nav
+# // navlogo
+# // NavMenu Icon
+# // Now the NavBarMenu
+# // inside navBar Item (Navbar item + Icon + NavLink that directed to='the link')
