@@ -5,7 +5,6 @@ import { GoDeviceCamera } from 'react-icons/go';
 // import Grey from '../../bckgroundImg/Grade-Grey.jpg';
 
 export const Nav = styled.nav`
-	background-color: #ffad99;
 	opacity: 0.6;
 	color: white;
 	height: 45px;

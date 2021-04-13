@@ -6,24 +6,33 @@ import GlobalStyle from './GlobalStyle';
 
 //import components
 import Nav from './components/Nav'
-import Main from './components/Main'
 import Footer from './components/Footer'
+import Gallery from './components/Gallery'
+import About from './components/About'
+import SignIn from './components/SignIn'
 
 export default function App() {
   return (
 		<>
 			<GlobalStyle />
 			<IconContext.Provider value={{ color: 'white' }}>
-        <Nav>
+				<Nav>
+					<Link to='/'>Home</Link>
+					<Link to='/about'>About</Link>
+					<Link to='/gallery'>Gallery</Link>
+				</Nav>
 
-        </Nav>
-        <Main>
+				<main>
+					<Switch>
+						<Route path='/' exact />
+						<Route path='/about' exact component={About} />
+						<Route path='/gallery' component={Gallery} />
+						<Route path='/signin' component={SignIn} />
+					</Switch>
+				</main>
 
-        </Main>
-        <Footer>
-
-        </Footer>
+				<Footer></Footer>
 			</IconContext.Provider>
-    </>
+		</>
 	);
 }
